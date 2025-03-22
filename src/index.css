@@ -85,6 +85,14 @@ html {
   scroll-behavior: smooth;
 }
 
+ul, ol {
+  list-style: none;
+}
+
+img {
+  object-fit: cover;
+}
+
 .btn {
   width: 100%;
   max-width: 160px;
@@ -109,6 +117,7 @@ html {
   gap: 3.2rem;
   padding-top: 8.8rem;
   padding-bottom: 8.8rem;
+  position: relative;
 }
 
 .desserts-title {
@@ -225,12 +234,123 @@ html {
   width: 30px;
   height: 30px;
 }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
 
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 592px;
+  border-radius: 8px;
 
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.modal-title {
+  font-size: 4rem;
+  line-height: 120%;
+}
+
+.modal-list {
+  background-color: var(--color-rose-50);
+  padding: 2.4rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+
+.modal-subtitle {
+  font-size: 1.6rem;
+  color: var(--color-rose-500);
+}
+
+.modal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img-name {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.name-price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: var(--font-size-preset-4);
+}
+
+.count-price {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.modal-item-name, .prod-count {
+ 
+  font-weight: 600;
+}
+
+.prod-count {
+  color: var(--color-red);
+}
+
+.prod-price {
+  color: var(--color-rose-500);
+}
+
+.prod-over-price {
+  font-size: var(--font-size-preset-3);
+  font-weight: 600;
+}
+
+.over-total {
+  font-size: var(--font-size-preset-2);
+  font-weight: 700;
+}
 
 @media screen and (max-width: 630px) {
   .products-list-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 610px) {
+  .modal-content {
+    border-radius: 8px 8px 0 0;
   }
 }
 

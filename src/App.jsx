@@ -2,6 +2,7 @@ import React from "react";
 import ProductList from "./components/ProductList";
 import YourCard from "./components/YourCard";
 import { useFetch } from "./hooks/useFetch";
+import Modal from "./components/Modal";
 const App = () => {
   const {
     data: deserts,
@@ -11,6 +12,7 @@ const App = () => {
 
   return (
     <div className="container grid-container">
+ 
       <ProductList deserts={deserts} isPending={isPending} />
       <YourCard />
     </div>
